@@ -1,6 +1,8 @@
 -- Inserting data into Customers
 INSERT INTO customers (name, email) VALUES ('Oliver Clozeoff', 'Badname@yahoo.com');
 INSERT INTO customers (name, email) VALUES ('Timothee Chalamet', 'datingKylie@aol.com');
+INSERT INTO customers (name, email) VALUES ('Alex Huynh', 'alex.va.huynh@gmail.com');
+INSERT INTO customers (name, email) VALUES ('Toby Huynh', 'hesmydawg@hotmail.com');
 -- query customer to ensure data was inserted
 select *
 from customers;
@@ -9,6 +11,7 @@ from customers;
 INSERT INTO movies (title, duration) VALUES ('Dune', 166);
 INSERT INTO movies (title, duration) VALUES ('The Matrix', 136);
 INSERT INTO movies (title, duration) VALUES ('Inside Out', 95);
+INSERT INTO movies (title, duration) VALUES ('Remember The Titans', 120);
 -- query movies to ensure data was inserted
 select *
 from movies;
@@ -17,6 +20,13 @@ from movies;
 INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (1, '2024-01-31 19:00:00', 1);
 INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (1, '2024-02-01 21:30:00', 2);
 INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (2, '2024-02-14 20:00:00', 1);
+INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (3, '2024-02-14 20:00:00', 1);
+INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (3, '2024-02-14 20:00:00', 2);
+INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (3, '2024-02-14 20:00:00', 3);
+INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (4, '2024-02-14 20:00:00', 1);
+INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (4, '2024-02-14 20:00:00', 2);
+INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (4, '2024-02-14 20:00:00', 3);
+INSERT INTO screenings (movie_id, screening_time, theater_number) VALUES (4, '2024-02-14 20:00:00', 4);
 -- query screenings to ensure data was inserted
 select *
 from screenings;
@@ -25,6 +35,9 @@ from screenings;
 INSERT INTO tickets (screening_id, customer_id) VALUES (1, 1); -- Customer 1 attending the first screening of Dune
 INSERT INTO tickets (screening_id, customer_id) VALUES (3, 2); -- Customer 2 attending the first screening of The Matrix
 INSERT INTO tickets (screening_id, customer_id) VALUES (2, 1); -- Customer 1 attending the first screening of Inside Out
+INSERT INTO tickets (screening_id, customer_id) VALUES (8, 4); 
+INSERT INTO tickets (screening_id, customer_id) VALUES (10, 3);
+INSERT INTO tickets (screening_id, customer_id) VALUES (7, 3); 
 -- query tickets to ensure data was inserted
 select *
 from tickets;
